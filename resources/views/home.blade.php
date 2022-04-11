@@ -1,5 +1,12 @@
 <?php
     $hw = 'Hello World!';
+
+    $array = [
+        '12',
+        '24',
+        '64',
+        '94'
+    ];
 ?>
 
 <!DOCTYPE html>
@@ -16,5 +23,12 @@
     </head>
     <body>
         <h1>{{ $hw }}</h1>
+
+        <p>Stampo il mio array con un ciclo:</p>
+        @foreach($array as $number)
+            <p>{{$number}}</p>
+        @endforeach
+
+        <p>L'array ha: {{count($array)}} elementi!</p>
     </body>
 </html>
